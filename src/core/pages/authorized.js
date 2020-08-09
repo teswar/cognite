@@ -1,19 +1,13 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
-// import { FIREBASE } from '../firebase';
 import { connect } from 'react-redux';
 import { Members, Connection } from '../components'
 
 function AuthorizedComponent() {
 
     return (
-        <div>
-            <div>This is the autorized page....</div>
-
-            <div>
-                <Members />
-                <Connection />
-            </div>
+        <div className="flex h-full">
+            <Members className="w-1/4 flex-grow overflow-auto" />
+            <Connection className="w-3/4 border-l-2 flex flex-col flex-grow" />
         </div>
     );
 }

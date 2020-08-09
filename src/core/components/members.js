@@ -5,19 +5,26 @@ import { connect } from 'react-redux';
 import { ACTIONS } from '../redux';
 
 
-export const Member = ({ value, isSelected, ...rest }) => {
-    
+export const Member = ({ value, ...rest }) => {
+
     return (
-        <div {...rest}>
-            <span>{value.name}</span>
-            {isSelected && <span>*</span>}
+        <div className="p-2" {...rest}>
+            <div className="rounded text-gray-700 text-center bg-gray-400 p-2 flex flex-row">
+                <div className="flex-grow-0 w-1/4">
+                    <img className="rounded-full w-24" src={value.avatar} style={{ objectFit: 'fit', width: '100%' }} loading="lazy" />
+                </div>
+                <div className="flex-grow p2"></div>
+                <div className="flex-grow-0 flex flex-col items-end justify-center pr-2">
+                    <div className="text-lg font-bold">{value.name}</div>
+                    <div className="font-semibold">{value.username}</div>
+                </div>
+            </div>
         </div>
     );
 };
 
-export function MembersComponent({ currentUser, selectedMember, startConversation }) {
+export function MembersComponent({ currentUser, selectedMember, startConversation, ...rest }) {
 
-    console.log('Members');
     const [state, setState] = React.useState({});
 
     React.useEffect(() => {
@@ -32,8 +39,8 @@ export function MembersComponent({ currentUser, selectedMember, startConversatio
     }
 
     return (
-        <div>
-            {state.members && state.members.map((value) => <Member key={value.id} onClick={() => startConversation(value)} {...{ value, isSelected: (selectedMember && value.id === selectedMember.id) }} />)}
+        <div {...rest}>
+            {state.members && state.members.map((value) => <Member key={value.id} onClick={() => startConversation(value)} {...{ value }} />)}
         </div>
     );
 }

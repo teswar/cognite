@@ -32,20 +32,10 @@ function AuthorizeRoutes() {
 export function AppComponent({ currentUser }) {
   console.log(currentUser);
   return (
-    <div className="App">
-      <header className="App-header">
-        <div style={{ height: '40px' }}>
-          <Link to="/" >
-            <img src={logo} className="App-logo" alt="logo" style={{ position: 'relative', display: 'block', height: '100%' }} />
-          </Link>
-        </div>
-      </header>
+    <div className="App h-screen flex flex-col" style={{ background: 'aliceblue' }}>
+      <Header className="flex flex-none items-center bg-gray-700 px-3"/>
 
-      <hr />
-
-      <Header />
-
-      <div>
+      <div className="flex-grow overflow-auto">
         {(!currentUser) ? <UnAuthorizeRoutes /> : <AuthorizeRoutes />}
       </div>
     </div>
