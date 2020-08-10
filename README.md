@@ -1,4 +1,4 @@
-#Demo messaging react app for cognite
+# Demo messaging react app for cognite
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
