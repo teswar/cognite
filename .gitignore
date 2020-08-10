@@ -30,3 +30,4 @@ package-lock.json
 .idea
 *.iml
 /*.ini
+/src/assets/tailwind.build.css

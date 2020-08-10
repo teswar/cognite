@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 
 import './assets/index.css';
-import './assets/tailwind.css';
+import './assets/tailwind.build.css';
 import * as serviceWorker from './serviceWorker';
 import { store } from './core/redux';
 import { App } from './app';

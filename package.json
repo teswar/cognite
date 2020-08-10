@@ -22,7 +22,7 @@
     "redux-devtools-extension": "^2.13.8"
   },
   "scripts": {
-    "build:tailwind": "tailwindcss build src/assets/tailwind/tailwind.css -o src/assets/tailwind.css",
+    "build:tailwind": "tailwindcss build src/assets/tailwind/tailwind.css -o src/assets/tailwind.build.css",
     "prestart": "npm run build:tailwind",
     "prebuild": "npm run build:tailwind",
     "start": "react-scripts start",
