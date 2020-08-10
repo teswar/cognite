@@ -1,42 +1,19 @@
-import React, { Fragment } from 'react';
-import { Route, Link } from 'react-router-dom';
-import logo from '../assets/logo.svg';
-import './app.css';
+import React from 'react';
+import { UnAuthorizedRoutes, AuthorizedRoutes } from './app.routes';
 import { withAuthentication } from '../core/hocs';
-import { SignIn, SignUp, Header } from '../core/components';
-import { UnAuthorized, Authorized } from '../core/pages';
+import { Header } from '../core/components';
 
-// import { Link } from 'react-router-dom';
-
-
-function UnAuthorizeRoutes() {
-  return (
-    <Fragment>
-      <Route path='/' component={UnAuthorized} exact />
-      <Route path='/signin' component={SignIn} exact />
-      <Route path='/signup' component={SignUp} exact />
-    </Fragment>
-  );
-}
-
-function AuthorizeRoutes() {
-  return (
-    <Fragment>
-      <Route path='/' component={Authorized} />
-    </Fragment>
-  );
-}
-
-
-
+/**
+ * TODO: move inline styles...
+ */
 export function AppComponent({ currentUser }) {
-  console.log(currentUser);
+
   return (
-    <div className="App h-screen flex flex-col" style={{ background: 'aliceblue' }}>
-      <Header className="flex flex-none items-center bg-gray-700 px-3"/>
+    <div className="h-screen flex flex-col text-center" style={{ background: 'aliceblue' }}>
+      <Header className="flex flex-none items-center bg-gray-700 px-3" />
 
       <div className="flex-grow overflow-auto">
-        {(!currentUser) ? <UnAuthorizeRoutes /> : <AuthorizeRoutes />}
+        {(!currentUser) ? <UnAuthorizedRoutes /> : <AuthorizedRoutes />}
       </div>
     </div>
   );
