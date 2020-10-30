@@ -131,7 +131,7 @@ export const ConnectionBody = ({ currentUser, partnerUser, connection, conversat
 
     return (
         <div className="flex-grow overflow-auto">
-            <div className="h-full flex flex-col justify-end">
+            <div className="min-h-full flex flex-col justify-end">
                 {
                     (!partnerUser)
                         ? <div className="justify-center m-auto">
