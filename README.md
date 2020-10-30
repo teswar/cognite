@@ -1,9 +1,17 @@
 # Demo messaging react app for cognite
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project messaging app build with firebase, tailswind and [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## If this is your first time
 
-In the project directory, you can run:
+Go to signup page.
+Enter the fields with values similar to the below JSON
+{
+  "username": "tesla.alive@cognite.com",
+  "name": "Tesla Júnior",
+  "avatar": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ2MTEyNjMzMV5BMl5BanBnXkFtZTYwODE0MzQ2._V1_UX172_CR0,0,172,256_AL_.jpg"
+}
+Then goto sign page and just enter the username.
+
 
 ### `npm start`
 
