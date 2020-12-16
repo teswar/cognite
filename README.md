@@ -1,7 +1,14 @@
 # Demo messaging react app for cognite
 This project messaging app build with firebase, tailswind and [Create React App](https://github.com/facebook/create-react-app).
 
-## If this is your first time
+## In a hurry to just feel it...
+* Go to [sign-in](https://cognitefirebasechat.netlify.app/signin) page.
+* Use any of the below and fill in the username and click sign-in.
+  - lindsay.ferguson@reqres.in
+  - michael.lawson@reqres.in
+
+
+## Got time to Sign-up and feel it...
 
 * Go to [sign-up](https://cognitefirebasechat.netlify.app/signup) page.
 * Enter the fields with values similar to the below JSON
